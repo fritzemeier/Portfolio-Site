@@ -16,7 +16,7 @@ header img {
     min-width: 70px;
 }
 
-body {
+body, article, section {
     font-style: "Palatino Linotype", "Book Antiqua", Palatino, Serif;
     font-size: 100%;
     width: 99%;
