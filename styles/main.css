@@ -17,6 +17,7 @@ header img {
 }
 
 body {
+    font-style: "Palatino Linotype", "Book Antiqua", Palatino, Serif;
     font-size: 100%;
     width: 99%;
     max-width: 960px;
