@@ -24,17 +24,19 @@ body {
     margin: 0 auto;
 }
 
-#CPTCteam {
+figure {
+    display: block;
     width: 600px;
     min-width: 100px;
     margin-left: auto;
     margin-right: auto;
 }
 
-figure {
-    display: block;
+#CPTCteam {
     width: 600px;
     min-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 figcaption {
