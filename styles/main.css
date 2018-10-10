@@ -35,8 +35,7 @@ figure {
 #CPTCteam {
     width: 600px;
     min-width: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto 10px auto;
 }
 
 figcaption {
