@@ -11,11 +11,14 @@ body {
 }
 
 header {
+    display: block;
     text-align: center;
+    font-family: "Courier New", Courier, monospace; 
+    border-bottom: 3px solid;
 }
 
 header img {
     float: none;
     width: 70px;
-    max-width: 100px;;
+    max-width: 100px;
 }
