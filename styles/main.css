@@ -3,13 +3,6 @@
     padding: 0;
 }
 
-body {
-    font-size: 100%;
-    width: 99%;
-    max-width 960px;
-    margin 0 auto;
-}
-
 header {
     display: block;
     text-align: center;
@@ -19,6 +12,18 @@ header {
 
 header img {
     float: none;
-    width: 70px;
-    max-width: 100px;
+    width: 100px;
+    min-width: 70px;
+}
+
+body {
+    font-size: 100%;
+    width: 99%;
+    max-width 960px;
+    margin 0 auto;
+}
+
+#CPTCteam {
+    width: 600px;
+    min-width: 100px;
 }
