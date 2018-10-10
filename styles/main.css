@@ -3,8 +3,15 @@
     padding: 0;
 }
 
-header {
+body {
+    font-size: 100%;
+    width: 99%;
+    max-width 960px;
+    margin 0 auto;
+}
 
+header {
+    text-align: center;
 }
 
 header img {
