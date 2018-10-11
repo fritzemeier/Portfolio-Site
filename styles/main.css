@@ -5,7 +5,16 @@
 
 html {
     background-image:
-        -webkit-linear-gradient(black, silver, black)
+        -webkit-linear-gradient(90deg, black, silver, black)
+}
+
+body {
+    background-color: white;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Serif;
+    font-size: 100%;
+    width: 99%;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 header {
@@ -19,14 +28,6 @@ header img {
     float: none;
     width: 100px;
     min-width: 70px;
-}
-
-body {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Serif;
-    font-size: 100%;
-    width: 99%;
-    max-width: 960px;
-    margin: 0 auto;
 }
 
 figure {
