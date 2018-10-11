@@ -57,11 +57,11 @@ figure {
 #CPTCteam {
     width: 600px;
     min-width: 100px;
-    margin: 10px auto;
 }
 
 figcaption {
     font-size: 70%;
     font-family: "Lucida Console", Monaco, monospace;
     text-align: center;
+    margin: 5px auto;
 }
