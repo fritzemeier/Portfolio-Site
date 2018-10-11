@@ -20,6 +20,58 @@ body {
     margin: 0 auto;
 }
 
+#nav_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: black;
+}
+
+    #nav_menu ul li {
+        float: left;
+        width: 19%;
+    }
+
+        #nav_menu ul li a {
+            display: block;
+            padding: 1em 0;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+#nav_menu a.current {
+    color: silver;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+    #nav_menu ul ul li {
+        float: none;
+        width: 160px;
+    }
+
+    #nav_menu ul ul li a {
+        display: block;
+        text-align: center;
+    }
+    
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
 header {
     display: block;
     text-align: center;
