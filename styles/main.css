@@ -32,6 +32,10 @@ header img {
     min-width: 70px;
 }
 
+article {
+    margin: 10px;
+}
+
 figure {
     display: block;
     width: 600px;
