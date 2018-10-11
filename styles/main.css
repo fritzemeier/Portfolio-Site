@@ -6,7 +6,8 @@
 html {
     height: 100%;
     background-image:
-        -webkit-linear-gradient(0deg, black 0%, silver 30%,silver 70%, black 100%)
+        -webkit-linear-gradient(0deg, black 0%, silver 30%,silver 70%, black 100%);
+    background-repeat: repeat-y;
 }
 
 body {
