@@ -5,7 +5,7 @@
 
 html {
     background-image:
-        -webkit-linear-gradient(0deg, black 0%, silver 30%,silver 70%, black 100%);
+        -webkit-linear-gradient(0deg, #0054a3 0%, silver 30%,silver 70%, #0054a3 100%);
 }
 
 body {
@@ -41,7 +41,7 @@ header img {
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: black;
+    background-color: #0054a3;
 }
 
     #nav_menu ul li {
