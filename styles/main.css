@@ -112,7 +112,7 @@ figure {
 
 figure img {
     width: 62.5%;
-    min-width: 100px;
+    max-width: 600px;
 }
 
 figcaption {
