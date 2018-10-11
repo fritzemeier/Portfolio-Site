@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+html {
+    background-image:
+        -webkit-linear-gradient(black, silver, black)
+}
+
 header {
     display: block;
     text-align: center;
