@@ -32,8 +32,16 @@ header img {
     min-width: 70px;
 }
 
+h1 {
+    margin: 5px 0;
+}
+
 article {
     margin: 10px;
+}
+
+p {
+    margin: 0 auto 10px
 }
 
 figure {
@@ -47,7 +55,7 @@ figure {
 #CPTCteam {
     width: 600px;
     min-width: 100px;
-    margin: 10px auto 10px auto;
+    margin: 10px auto;
 }
 
 figcaption {
