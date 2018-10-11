@@ -5,7 +5,7 @@
 
 html {
     background-image:
-        -webkit-linear-gradient(90deg, black, silver, black)
+        -webkit-linear-gradient(90deg, black 0%, silver 30%,silver 70%, black 100%)
 }
 
 body {
