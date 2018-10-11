@@ -103,16 +103,16 @@ p {
 
 figure {
     display: block;
-    width: 62.5%;
-    max-width: 600px;
+    width: 600px;
+    max-width: 62.5%;
     margin-left: auto;
     margin-right: auto;
     border: inset 3px #0054a3;
 }
 
 figure img {
-    width: 62.5%;
-    max-width: 600px;
+    width: 600px;
+    max-width: 62.5%;
 }
 
 figcaption {
