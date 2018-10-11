@@ -103,8 +103,8 @@ p {
 
 figure {
     display: block;
-    width: 600px;
-    min-width: 100px;
+    width: 62.5%;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     border: inset 3px #0054a3;
