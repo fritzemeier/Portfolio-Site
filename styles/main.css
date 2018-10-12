@@ -24,14 +24,13 @@ header {
 }
 
 header img {
-    float: none;
     width: 100px;
     min-width: 70px;
     margin: 10px auto;
 }
 
 #htb_badge {
-    float: right;
+    max-width: 90%;
 }
 
 #nav_menu {
