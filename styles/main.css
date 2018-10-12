@@ -51,12 +51,11 @@ header img {
 
     #nav_menu ul li {
         float: left;
+        width: 19%;
     }
 
         #nav_menu ul li a {
             display: block;
-            width: 160px;
-            margin: 0;
             padding: .25em 0;
             text-align: center;
             text-decoration: none;
@@ -69,6 +68,7 @@ header img {
 }
 
 .left-border {
+    position: initial;
     float: left;
     width: 0;
     border: solid .1em #ffdd00;
@@ -82,7 +82,7 @@ header img {
 
     #nav_menu ul ul li {
         float: none;
-        width: 160px;
+        width: 19%;
     }
 
     .top-border {
