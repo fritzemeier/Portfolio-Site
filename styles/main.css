@@ -68,6 +68,12 @@ header img {
     color: #ffdd00;
 }
 
+.left-border {
+    float: left;
+    width: 0;
+    border: solid .1em #ffdd00;
+}
+
 #nav_menu ul ul {
     display: none;
     position: absolute;
@@ -79,12 +85,18 @@ header img {
         width: 160px;
     }
 
+    .top-border {
+        display: block;
+        margin-left: 10%;
+        width: 80%;
+        border: solid .1em #ffdd00;
+    }
+
     #nav_menu ul ul li a {
         display: block;
         margin: 0;
         padding: .25em 0;
         text-align: center;
-        border-top: 1px solid #ffdd00;
     }
     
 #nav_menu ul li:hover > ul {
