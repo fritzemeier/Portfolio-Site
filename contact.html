@@ -17,8 +17,8 @@
 
     <div id="nav_menu">
         <ul>
-          <li><a href="#" class="current">Home</a></li>
-          <li><a href="competitions.html">Competitions</a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="competitions.html">Competitions</a>
             <ul>
                 <div class="top-border"></div>
                 <li><a href="competitions.html#CPTC">CPTC</a></li>
@@ -36,20 +36,27 @@
                 <li><a href="https://twitter.com/atfritzemeier" target="_blank"><img id="ddico" src="images/twittericon.png" alt="Twitter Logo"> Twitter</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#" class="current">Contact</a></li>
         </ul>
     </div>
 
     <main>
-      <h1>Welcome</h1>
-      <p>
-        Hello, I created this site from scratch in attempts to centralize projects and competitions into one place as a 
-        portfolio.  Starting on October 10<sup>th</sup>, 2018, I began to add pages and other resources.  I plan to continuously 
-        update the site as I gain more experience and grow my interests.
-      </p>
-      <p>
-        Feel free to have a look around the site and even venture out to my other profiles across the web via the <strong>Sites</strong> dropdown menu.
-      </p>
+        <form name="contact" method="POST" netlify>
+            <p>
+              <label>Your Name: <input type="text" name="name" /></label>   
+            </p>
+            <p>
+              <label>Your Email: <input type="email" name="email" /></label>
+            </p>
+            <p>
+              <label>Message:
+              <br>
+              <textarea name="message"></textarea></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
     </main>
 
     <footer><a href="#top">Back to top</a></footer>

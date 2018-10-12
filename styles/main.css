@@ -118,6 +118,15 @@ main {
     margin: 10px;
 }
 
+form {
+    margin: 10px auto 0 25%;
+}
+
+form textarea {
+    width: 70%;
+    height: 100px;
+}
+
 p {
     margin: 0 auto 10px
 }
