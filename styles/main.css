@@ -30,6 +30,10 @@ header img {
     margin: 10px auto;
 }
 
+#htb_badge {
+    float: right;
+}
+
 #nav_menu {
     overflow: hiden;
 }
