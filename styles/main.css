@@ -29,6 +29,10 @@ header img {
     margin: 10px auto;
 }
 
+#GHL {
+    max-width: 10%;    
+}
+
 #htb_badge {
     max-width: 90%;
 }
@@ -52,7 +56,8 @@ header img {
         #nav_menu ul li a {
             display: block;
             width: 160px;
-            padding: 1em 0;
+            margin: 0;
+            padding: .25em 0;
             text-align: center;
             text-decoration: none;
             color: white;
@@ -76,7 +81,10 @@ header img {
 
     #nav_menu ul ul li a {
         display: block;
+        margin: 0;
+        padding: .25em 0;
         text-align: center;
+        border-top: 1px solid #ffdd00;
     }
     
 #nav_menu ul li:hover > ul {
