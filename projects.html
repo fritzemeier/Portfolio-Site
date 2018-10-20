@@ -103,8 +103,8 @@
             <li>Plug the male end of the spliced cord into an outlet. With everything in working order, a green LED should start blinking.</li>
             <li>Hold down the button on the Sonoff Switch for 5 seconds. The LED should start blinking as the device enters AP mode.</li>
             <li>Use the WiFi capable device to connect to the device's network advertised as ITEAD-10000xxxxx (each x standing for some arbitrary character).  The default password 
-              should be 12345678.</li>
-            <li>THE SWITCH DROPS OUT OF AP MODE AFTER A FEW MINUTES. Send network configuration data via the POST method to the device:</li>
+              should be 12345678. THE SWITCH DROPS OUT OF AP MODE AFTER A FEW MINUTES, BE PREPARED.</li>
+            <li>Send network configuration data via the POST method to the device:</li>
             <div class="codebox"><code>wget -O- --post-data='{"version":4,"ssid":"yourSSID","password":"yourSSID_PASSWORD","serverName":"n.n.n.n","port":1081}' --header=Content-Type:application/json "http://10.10.7.1/ap"</code></div>
             <li>If connected to the device and the configuration data accepted, the device should send a response to the WiFi device.</li>
           </ol>
