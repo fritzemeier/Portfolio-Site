@@ -98,6 +98,7 @@
           <br>
           <h3>The Process:</h3>
           <ol>
+            <li>Due to the server using port 443 (unsure as to exactly why, but it does...) you must do the following with root privileges.</li>
             <li>Add the correct configuration for your network in the <code>sonoff.config.json</code> file.</li>
             <li>Reconfigure <code>var express = require('body-parser')</code> within <code>sonoff.server.js</code> to point to the correct file in the directory.</li>
               <div id="hanging">I found it under <code>[PATH TO PARENT DIRECTORY]/simple-sonoff-server/node_modules/express/node_modules/body-parser</code>.</div>
