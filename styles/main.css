@@ -175,7 +175,7 @@ ul, ol {
     display: none;
 }
 
-@media screen and (max-width: 370px) {
+@media only screen and (max-width: 370px) {
 
     .icon_container {
         display: block;
