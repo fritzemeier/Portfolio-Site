@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Austin Fritzemeier</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+
+  <body>
+    <header>
+      <img src="images/avatar.png" alt="avatar.png">
+      <p>Austin Fritzemeier's Portfolio</p>
+    </header>
+
+    <div class="nav_menu" id="topnav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="competitions.html">Competitions</a>
+            <ul>
+                <div class="top-border"></div>
+                <li><a href="competitions.html#CPTC">CPTC</a></li>
+                <div class="top-border"></div>
+                <li><a href="competitions.html#CCDC">Mock CCDC</a></li>
+            </ul>
+            <li><a href="#" class="current">Projects</a></li>
+          </li>
+          <li><a href="#">Sites</a>
+            <ul>
+                <div class="top-border"></div>
+                <li><a href="https://linkedin.com/in/austinfritzemeier" target="_blank"><img id="ddico" src="images/linkedin.png" alt="LinkedIn Logo"> LinkedIn</a></li>
+                <div class="top-border"></div>
+                <li><a href="https://github.com/fritzemeier" target="_blank"><img id="ddico" src="images/GitHub-Mark-32px.png" alt="GH Logo"> GitHub</a></li>
+                <div class="top-border"></div>
+                <li><a href="https://www.hackthebox.eu/home/users/profile/28434" target="blank">Hack the Box<img id="htb_badge" src="https://www.hackthebox.eu/badge/image/28434" alt="Hack The Box"></a></li>
+                <div class="top-border"></div>
+                <li><a href="https://twitter.com/atfritzemeier" target="_blank"><img id="ddico" src="images/twittericon.png" alt="Twitter Logo"> Twitter</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="icon_container"><a href="nav.html"><img class="menu_icon" src="images/menuicon.png" alt="menu"></a></div>
+
+    <main>
+        <article>
+          <h1>Raspberry Pi SMS Command Execution</h1>
+          <p>
+              In March of 2018, I began to look into automation using a Raspberry Pi. This began an in-depth learning experience of Linux alongside a bit of Python programming
+              and editing bits of JavaScript code from two other projects on GitHub.  I also learned how to create and delete scheduled Cron jobs via Python and dump information
+              about the execution into a log of its own.
+          </p>
+          <p>
+              In my <a href="https://github.com/fritzemeier/RPiCafeLogging"></a>first venture to complete this task, I began to search for a way to send keywords or commands via SMS
+              messages (text messages) to my Raspberry Pi, parsing them for possible security risks such as the sender of the message and their intentions, then executing ones that
+              may be deemed acceptable.  I found that the pygooglevoice module would be fitting.  Instead of having to purchase a GSM capable USB or some other expensive solution,
+              pygooglevoice provided the ability to view, delete, and send SMS messages directly from the command line.  The original project was ditched by its creators a few years
+              prior, so I found <a href="https://github.com/pettazz/pygooglevoice">a GitHub project by pettazz</a> which was also a bit out-of-date, yet actually worked. I ended up
+              modifying one of the examply Python programs provided within the project which parsed the SMS into a Python list, of which contained sender info and message body.  I
+              ended up taking the returned messages, checking the sender, searching the message for a specific keyword or sets of keywords, and then executing the corresponding
+              function. My chosen options for functions became "schedule," "execute," and "cancel" because the initial objective with the Pi was to interact with a coffee maker,
+              allowing me to start or schedule coffee at my discretion by simply sending a text message.
+          </p>
+          <p>
+              Once I felt my text messaging project was fully functional and well-thought out, I purchased a pair of
+              <a href="https://www.amazon.com/Sonoff-Electrical-Household-Appliances-Compatible/dp/B074N22WFT/ref=pd_sim_60_3?_encoding=UTF8&pd_rd_i=B074N22WFT&pd_rd_r=a223bce3-d3e6-11e8-bb24-b147f0633e7b&pd_rd_w=zhcdZ&pd_rd_wg=RVG6g&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=18bb0b78-4200-49b9-ac91-f141d61a1780&pf_rd_r=17CQACDDJHZ1P6QV4RM6&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=17CQACDDJHZ1P6QV4RM6">
+              Sonoff Basic WiFi switches</a>, simply put: a relay with an ESP8266 WiFi capable chip, which was supposed to be a simple solution versus using the Raspbery Pi with a
+              relay attached to the GPIO pins next to my kitchen sink.  If the Pi is positioned where I cannot leave a keyboard and monitor nearby in fear of water damage, My skin
+              would crawl. So, the WiFi switch seemed reasonable. However, it came with a few interesting issues.  The Switch comes with out-of-date firmware. This may sound like a
+              risk to the everyday user, but, as it turns out, the default firmware is capable of communicating with a server on the same network, enabling HTTP/S interactions with
+              the switch.  I learned this the hard way when I updated the first Switch I took out of the box.  Thankfully, I swapped this for much simpler usage than what I originally
+              wanted, such as a desk lamp or fan.  Thankfully, I bought two.
+          </p>
+          <p>
+              After learning my lesson with the first Switch, I made sure to keep the second one downgraded for the sake of the project.  My next step was to set up a NodeJS server
+              hosted by the Raspberry Pi which would allow communication to the Switch simply by making HTTP/S requests with the correct parameters.  Another GitHub project, mdopp's
+              <a href="https://github.com/mdopp/simple-sonoff-server">simple-sonoff-server</a> provided the functionality and simplicity I desired.  Because of poor documentation
+              as well as my lack of experience with NodeJS/servers in general, I had difficulty understanding the correct sequence of events and devices needed to initiate the process. 
+              Especially for Raspberry Pi's it seemed a bit complicated; however, I finally worked it out as such:
+          </p>
+          <br>
+          <h3>Devices Needed:</h3>
+          <ol>
+            <li>One device hosting the NodeJS server</li>
+            <li>A separate WiFi capable device to make <code>wget</code> requests (I used a laptop booting from a live Linux USB)</li>
+            <li>One Sonoff Basic WiFi Switch correctly spliced into an extension cord or power cord of your liking.</em></li>
+          </ol>
+          <br>
+          <h3>The Process:</h3>
+          <ol>
+            <li>Add the correct configuration for your network in the <code>sonoff.config.json</code> file.</li>
+            <li>Reconfigure <code>var express = require('body-parser')</code> within <code>sonoff.server.js</code> to point to the correct file in the directory.</li>
+              <div id="hanging">I found it under <code>[PATH TO PARENT DIRECTORY]/simple-sonoff-server/node_modules/express/node_modules/body-parser</code>.</div>
+            <li>Some other possible misconfigurations, I cannot recall if any more were necessary, but just in case.</code>.</li>
+            <li>Start NodeJS by running <code>node sonoff.server.js</code> on the designated server.</li>
+            <li>Plug the male end of the spliced cord into an outlet. With everything in working order, a green LED should start blinking.</li>
+            <li>Hold down the button on the Sonoff Switch for 5 seconds. The LED should start blinking as the device enters AP mode.</li>
+            <li>Use the WiFi capable device to connect to the device's network advertised as ITEAD-10000xxxxx (each x standing for some arbitrary character).  The default password 
+              should be 12345678.</li>
+            <li>THE SWITCH DROPS OUT OF AP MODE AFTER A FEW MINUTES. Send network configuration data via the POST method to the device:</li>
+            <div class="codebox"><code>wget -O- --post-data='{"version":4,"ssid":"yourSSID","password":"yourSSID_PASSWORD","serverName":"n.n.n.n","port":1081}' --header=Content-Type:application/json "http://10.10.7.1/ap"</code></div>
+            <li>If connected to the device and the configuration data accepted, the device should send a response to the WiFi device.</li>
+          </ol>
+          <p>
+            After all of the above is said and done simple GET requests to the server will change the state of the device.
+            <ul>
+              <li><code>/devices</code> => list off all devices that are currently known to the server.</li>
+              <li><code>/devices/:deviceId/status</code> => shows the status of the device</li>
+              <li><code>/devices/:deviceId/on</code> => turns the device "on"</li>
+              <li><code>/devices/:deviceId/off</code> => turns the device "off"</li>
+            </ul>
+          </p>    
+        </article>
+    </main>
+
+    <footer><a href="#top">Back to top</a></footer>
+  </body>
+</html>
