@@ -195,12 +195,22 @@ ul, ol {
     }
 
     .nav.responsive ul {
+        display: block;
         list-style-type: none;
         background-color: #0054a3;
     }
 
+    .nav.responsive ul li {
+        padding: .5em 0;
+        color: white;
+    }
     .nav.responsive ul li a {
         text-decoration: none;
         color: white;
     }
+    
+    .top-border.responsive {
+        margin: 4px 0;
+    }
+    
 }
