@@ -25,7 +25,12 @@
                 <div class="top-border"></div>
                 <li><a href="competitions.html#CCDC">Mock CCDC</a></li>
             </ul>
-            <li><a href="#" class="current">Projects</a></li>
+            <li><a href="#" class="current">Projects</a>
+              <ul>
+                  <div class="top-border"></div>
+                  <li><a href="projects.html#RPiSMS">RPi SMS Cmd</a></li>
+                </ul>            
+            </li>
           </li>
           <li><a href="#">Sites</a>
             <ul>
@@ -46,7 +51,7 @@
 
     <main>
         <article>
-          <h1>Raspberry Pi SMS Command Execution</h1>
+          <h1 id="RPiSMS">Raspberry Pi SMS Command Execution</h1>
           <p>
               In March of 2018, I began to look into automation using a Raspberry Pi. This began an in-depth learning experience of Linux alongside a bit of Python programming
               and editing bits of JavaScript code from two other projects on GitHub.  I also learned how to create and delete scheduled Cron jobs via Python and dump information
@@ -64,7 +69,7 @@
               allowing me to start or schedule coffee at my discretion by simply sending a text message.
           </p>
           <p>
-              Once I felt my text messaging project was fully functional and well-thought out, I purchased a pair of
+              Once I felt my RPi SMS project was functional enough simply logging the executions (about 7 months later), I purchased a pair of
               <a href="https://www.amazon.com/Sonoff-Electrical-Household-Appliances-Compatible/dp/B074N22WFT/ref=pd_sim_60_3?_encoding=UTF8&pd_rd_i=B074N22WFT&pd_rd_r=a223bce3-d3e6-11e8-bb24-b147f0633e7b&pd_rd_w=zhcdZ&pd_rd_wg=RVG6g&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=18bb0b78-4200-49b9-ac91-f141d61a1780&pf_rd_r=17CQACDDJHZ1P6QV4RM6&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=17CQACDDJHZ1P6QV4RM6">
               Sonoff Basic WiFi switches</a>, simply put: a relay with an ESP8266 WiFi capable chip, which was supposed to be a simple solution versus using the Raspbery Pi with a
               relay attached to the GPIO pins next to my kitchen sink.  If the Pi is positioned where I cannot leave a keyboard and monitor nearby in fear of water damage, My skin
@@ -111,7 +116,18 @@
               <li><code>/devices/:deviceId/on</code> => turns the device "on"</li>
               <li><code>/devices/:deviceId/off</code> => turns the device "off"</li>
             </ul>
-          </p>    
+          </p>
+          <h3>Conclusion</h3>
+          <p>
+            Shortly after I purchased the WiFi switches, I found out the new version of iOS (version 12) brought along a native iPhone app called <em>Shortcuts</em>.  My emotions were 
+            split. A part of me was relieved as much as grateful that Apple had finally introduced SSH, web requests, and some scripting functionality into their OS. The other was slightly
+            frustrated that I had went through a bunch of trouble to set up a SMS system in the first place now that it was rendered somewhat moot.  Thankfully, I may still be able to 
+            adjust the repo so that I may text and execute any command on the Pi rather than using SSH.  That would be if pygooglevoice hadn't started giving me troubles.
+          </p>
+          <h3>TL;DR</h3>
+          <p>
+            I programmed a SMS system to try and run a relay, but Apple caught up and my dependencies dun broke. Still got the hardware tho.
+          </p>
         </article>
     </main>
 
